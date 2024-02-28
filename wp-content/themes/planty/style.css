@@ -1,0 +1,581 @@
+/*
+ Theme Name:   Planty
+ Theme URI:    https://openclassrooms.com/
+ Description:  Thème Planty basé sur le thème Blankslate
+ Author:       Veronique Delauney
+ Author URI:   https://openclassrooms.com/
+ Template:     blankslate
+ Version:      1.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         boissons, bio
+ Text Domain:  planty
+*/
+
+html {
+    background: #FFF;
+    padding:0
+}
+
+body {
+    font-family: "Syne", sans-serif;
+    padding:0;
+    margin:0
+}
+
+h1, h2, h3 {
+    font-optical-sizing: auto;
+    font-weight: 800!important;
+    font-style: normal;
+}
+
+.green h1, .green h2, .green h3, .green p { color:#FFF }
+
+h2.green  {
+    font-size: 2.3em;
+    margin: 0
+}
+
+.green h1 { font-size: 3em }
+
+h4, h5 { color:#000!important }
+
+h5 { 
+	font-weight:500; 
+	font-size: 1.3em!important;
+	line-height:2em!important;
+	margin-bottom:0!important
+}
+
+.blocFruit h3 { font-size:2em }
+
+
+/* Header */
+#header, .avis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width:1400px;
+    margin: auto
+}
+
+#header #branding {
+    display: flex;
+    align-items: center;
+    padding-left:2em
+}
+
+#header .logo img {
+    width:200px; 
+    max-width:200px
+}
+
+#header ul#menu-menuheader {
+    display: flex;
+    list-style: none;    
+    margin: 0;
+}
+
+#header ul#menu-menuheader a {
+    text-decoration: none;
+    color:#000
+}
+
+#header ul#menu-menuheader li {
+    padding:1em 2em
+}
+
+#header ul#menu-menuheader li:first-child {
+    padding-left:0;
+    padding-right:0;
+}
+
+#header ul#menu-menuheader li:last-child, .wp-element-button {
+    background-color: #DC9F96;
+}
+
+#header ul#menu-menuheader li:last-child a, #header ul#menu-menuheader li:last-child:hover {
+    color:#FFF!important;
+}
+
+#header ul#menu-menuheader li:last-child:hover, .wp-element-button:hover {
+    background: #C02E44!important;
+}
+/* End Header */
+
+
+
+
+/* Background colors */
+
+.containerBeige, .beigeCurved, .beigeCurvedSmall {
+    background:#ECE2DA;
+    width:100%;
+    text-align: center;
+    padding-top:3em;
+    padding-bottom:3em
+}
+
+.beigeCurved {
+    border-bottom-left-radius: 50% 10%!important;
+    border-bottom-right-radius: 50% 10%!important;
+}
+
+.beigeCurvedSmall {
+    border-bottom-left-radius: 12% 2%;
+    border-bottom-right-radius: 12% 2%;
+}
+
+.beigeCurved h1 {
+    color:#3B8E46;
+    text-transform:uppercase;
+    font-size: 2.5em;
+}
+
+.containerGreen {
+    background:#3B8E46;
+    color:#FFF
+}
+
+.blocTexte {
+    text-align: center;
+    width:30%;
+    font-size:1.2em;
+    line-height: 1.5em;
+    margin: 5em auto;
+}
+
+.blocTexte h2 {
+    font-weight: 600!important;
+}
+
+.containerBeige h3, .beigeCurvedSmall h3 {
+    color:#FFF
+}
+
+.containerBeige h2, .beigeCurvedSmall h2 {
+    color:#D2776A;
+    font-size: 2.3em;
+}
+
+
+
+/* Large canette */
+.drinkLarge {
+    margin-top:5em;
+    background-image: url(http://planty.local/wp-content/uploads/2024/02/plante_vers_gauche-1.png), url(http://planty.local/wp-content/uploads/2024/02/plante_vers_droite.png);
+    background-position: 40% 30%, 63% 30%;
+    background-repeat: no-repeat, no-repeat;
+}
+
+
+
+
+
+
+
+
+.fruitsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	width:60%;
+    margin: 1em auto;
+    gap: 2em
+}
+
+.blocFruit {
+	position: relative;
+    flex-basis: calc(45% - 10px);
+	box-sizing: border-box;
+}
+
+.containerFruitsInline, .commandeForm {
+    width:100%!important;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.commandeForm .wp-block-heading, .commandeFormBloc {
+	position: relative;
+    flex-basis: 50%;
+	box-sizing: border-box;
+}
+
+.topBottomWhiteBorder {
+	border-top:1px solid #FFF;
+	border-bottom: 1px solid FFF;
+	margin:0;
+	padding:2em 0;
+	float: left;
+	display: block;
+	width:100%
+}
+
+ .blocFruit25 {
+	position: relative;
+    flex-basis: calc(25% - 10px);
+	box-sizing: border-box;
+}
+
+.containerFruitsInline h3 { 		
+    font-size:1.5em 
+}
+
+#CoversRectangles .wp-block-cover, .wp-block-cover-image {
+	min-height:12em!important
+}
+
+.avis {
+	display: flex;
+    justify-content: space-around;
+}
+
+.person {
+	width:50%;
+}
+
+.person img {
+    padding-right:1em
+}
+
+.personneAvis {
+	width:30%;
+}
+
+
+
+
+.contactForm input, .contactForm textarea {
+    max-width: 100%!important;
+		border-radius: 0.5em!important;
+		border:none!important;
+		height: 4em
+}
+
+.contactForm textarea {
+	height:15em!important
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-submit-container {
+    text-align: center;
+}
+
+.contactForm button[type=submit] {
+	text-align:center;
+	background-color: var(--ast-global-color-2)!important
+}
+
+.green {
+	color: #3B8E46!important
+}
+
+.equipe_container {
+	position: relative; 
+}
+
+.flex3Cols {
+		width: 60%;
+    justify-content: space-between;
+}
+
+.equipe_container .branche {
+	position:absolute;
+  bottom: 0; 
+	right:10em;
+	z-index:-100;
+	background-repeat: no-repeat
+}
+
+.summary { font-size:1.2em }
+
+.halfWidth { width:50% }
+.thirdWidth { width:30% }
+
+
+
+
+
+/* Ligne canettes */
+.ligneCanettes {
+    height:7em;
+    overflow: hidden;
+}
+
+.ligneCanettes img {
+    width:5em;
+    vertical-align: top;
+}
+
+.ligneCanettes .top1 {
+    padding-top:2em;
+}
+
+.ligneCanettes .top2, .ligneCanettes .top4 {
+    padding-top:1em;
+}
+
+.ligneCanettes .top3 {
+    padding-top:0em;
+}
+/* End canettes */
+
+
+
+
+
+
+
+/* Footer */
+#Footer {
+    text-align:center;
+    padding:1em 0
+}
+
+footer a {
+	color:#000;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* PHONES */
+@media (min-width: 320px) and (max-width: 480px) {
+
+    body {
+        /* background: lime */
+    }
+
+    h2 {
+        padding:3em 0 1em 0!important;
+        margin:0
+    }
+
+    h2.green {
+        line-height: 1em;
+    }
+
+    #header {
+        flex-direction: column;
+    }
+
+    #menu {
+        width:100%;
+    }
+
+    #header ul#menu-menuheader {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header ul#menu-menuheader li {
+        padding: 1em;
+        text-align: center;
+    }
+
+    #header ul#menu-menuheader li:first-child {
+        padding:1em;
+    }
+
+    #branding {
+        padding:2em
+    }
+
+    .beigeCurved h1 {
+        font-size: 1.2em;
+    }
+
+    .beigeCurvedSmall h2, .blocTexte h2 {
+        padding-top:0!important
+    }
+
+    .blocTexte {
+        width: 100%;
+        font-size: 1.1em
+    }
+
+    .fruitsContainer {
+        width:80%;
+    }
+
+    .avis {
+        flex-direction: column;
+    }
+
+    .personneAvis {
+        width: 70%;
+        flex-direction: column;
+        text-align:center;
+        border-bottom: 1px solid #D2776A;
+        padding:1em 0
+    }
+
+    .personneAvis h3 {
+        margin: 0
+    }
+
+    .summary, .blocFruit h3 {
+        font-size: 1.2em;
+    }
+
+    .summary, .blocTexte {
+        width:70%
+    }
+
+    .ligneCanettes {
+        height: 3.5em
+    }
+
+    .ligneCanettes img {
+        width: 2em;
+        vertical-align: top;
+    }
+
+    .blocFruit25 {
+        min-height: 8em!important;
+    }
+
+    .size-large {
+        width:50%;
+        margin: 0 auto
+    }
+
+    .drinkLarge {
+        margin-top: 3em;
+        background-image: url(http://planty.local/wp-content/uploads/2024/02/plante_vers_gauche-150x150.png), url(http://planty.local/wp-content/uploads/2024/02/plante_vers_droite-150x150.png);
+        background-position: 6% 60%, 100% 30%;
+        background-repeat: no-repeat, no-repeat;
+    }
+}
+
+
+
+
+
+
+/* LOW RES TABLETS */
+@media (min-width: 481px) and (max-width: 767px) {
+    #header {
+        flex-direction: column;
+    }
+
+    #menu {
+        width:100%;
+    }
+
+    #header ul#menu-menuheader {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header ul#menu-menuheader li {
+        padding: 1em;
+        text-align: center;
+    }
+
+    #header ul#menu-menuheader li:first-child {
+        padding:1em;
+    }
+
+    #branding {
+        padding:2em
+    }
+
+    .beigeCurved h1 {
+        font-size: 1.8em;
+    }
+
+    .blocTexte, .summary {
+        width: 80%;
+    }
+
+    h2.green {
+        font-size: 1.5em;
+    }
+
+    .blocFruit25 {
+        min-height: 10em!important;
+    }
+
+    .avis {
+        flex-direction: column;
+    }
+
+    .personneAvis {
+        width: 70%;
+        flex-direction: column;
+        text-align:center;
+        border-bottom: 1px solid #D2776A;
+        padding:1em 0
+    }
+
+    .personneAvis h3 {
+        margin: 0
+    }
+}
+ 
+/* LANDSCAPE TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+    .blocFruit25 {
+        min-height: 10em!important;
+    }
+    
+  }
+
+  
+/* PORTRAIT TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* #header {
+        
+    } */
+
+    .beigeCurved h1 {
+        font-size: 2em;
+    }
+
+    .blocTexte {
+        width:50%
+    }
+
+    h2.green {
+        font-size: 1.8em;
+    }
+
+    .green {
+        padding: 1em 0 0 0 imortant !important
+    }
+
+    .ligneCanettes {
+        height: 3.5em
+    }
+
+    .ligneCanettes img {
+        width: 2em;
+        vertical-align: top;
+    }
+
+    .avis {
+        flex-direction: row;
+        width:80%
+    }
+
+    .personneAvis {
+        width: 30%;
+        flex-direction: column;
+        text-align:center;
+        padding:0 1em
+    }
+
+    .personneAvis h3 {
+        margin: 0
+    }
+
+}
