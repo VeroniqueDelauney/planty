@@ -164,8 +164,8 @@ h5 {
     color:#3B8E46!important;
 }
 
-.beigeCurvedSmall h1 {
-    color:#D2776A;
+.beigeCurvedSmall h1, .containerBeige .wpcf7-not-valid-tip {
+    color:#D2776A!important;
 }
 
 .beigeCurved h1, .beigeCurvedSmall h1 {
@@ -385,8 +385,8 @@ input.quantity {
 
 .commander .blocFruit {
     flex-basis: 23%;
-    height:9em!important;
-    min-height: 9em!important;
+    height:11em!important;
+    min-height: 11em!important;
 }
 
 .commander .blocFruit h3 {
@@ -402,8 +402,8 @@ input.quantity {
 .blocFruit, .bloc25 {
 	position: relative;
 	box-sizing: border-box;
-    min-height: 15em!important;
-    height: 15em!important;
+    min-height: 19em!important;
+    height: 19em!important;
     color:#FFF
 }
 
