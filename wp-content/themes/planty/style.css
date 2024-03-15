@@ -318,12 +318,15 @@ input.quantity {
 
 .quantity, .groupQuantities .wpcf7-form-control-wrap, p > input[type="submit"], .center {
     text-align: center!important;
+    margin-left: auto!important;
+    margin-right: auto!important
 }
 
 .groupCols { 
     display:flex;
     border-top: 1px solid #FFF;
-    padding-top:2em
+    padding-top:2em;
+    width: 100%!important;   
 }
 
 .col {
@@ -372,11 +375,11 @@ input.quantity {
 
 .commander .fruitsContainer {
     width: 100%;
-    margin:3em auto 0 auto;
+    margin: 1em auto 0 auto;
     padding-bottom: 0;
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .blocFruit {
@@ -385,31 +388,28 @@ input.quantity {
 
 .commander .blocFruit {
     flex-basis: 23%;
-    height:11em!important;
-    min-height: 11em!important;
+    height:10em!important;
+    min-height: 10em!important;
 }
 
 .commander .blocFruit h3 {
     font-size: 1.3em
 }
 
-
-.bloc25 {
-    flex-basis: calc(25% - 1em);
-    text-align: center;
+.blocFruitQuantity {
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    width:23%
 }
 
-.blocFruit, .bloc25 {
+
+.blocFruit {
 	position: relative;
 	box-sizing: border-box;
     min-height: 19em!important;
     height: 19em!important;
     color:#FFF
-}
-
- .bloc25 {
-    min-height: auto!important;
-    height: auto!important;
 }
 
 .commandeForm {
@@ -642,6 +642,8 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 
     .center, .quantity, .groupQuantities .wpcf7-form-control-wrap, form, .containerGreen, p > input[type="submit"], #CoversRectangles, #header ul#menu-menuheader li {
         text-align: center;
+        margin-left: auto!important;
+        margin-right: auto!important
     }
 
     #CoversRectangles {
@@ -717,18 +719,22 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
     }
 
     .commander .blocFruit {
-        height:6em!important;
-        min-height: 6em!important;
+        height:10em!important;
+        min-height: 10em!important;
         padding:0!important;
+    }
+
+    .blocFruitQuantity {
+        width:47%
     }
 
     input.quantity {
         width:2em!important
     }
-
+/* 
     .blocFruit {
         width:30%!important
-    }
+    } */
 
     .beigeCurvedSmall .blocFruit {
         width: 100%!important
@@ -818,7 +824,7 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
     }
     
     .groupCols { 
-        display:flex;   
+        display:flex;
     }
     
     .borderRight {
@@ -922,7 +928,7 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
     }
 
     .commander .blocFruit h3 {
-        font-size: 0.7em
+        font-size: 1.3em
     }
 
     .blocFruit {
@@ -937,20 +943,14 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
         color:#FFF
     }
 
-    .bloc25 {
-        flex-basis: calc(27% - 1em);
-        text-align: center;
+    .blocFruitQuantity {
+        width:47%;
     }
 
 }
  
 
-/* LANDSCAPE TABLETS */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-}
-
-  
-/* PORTRAIT TABLETS */
+/* TABLETS */
 @media (min-width: 768px) and (max-width: 1024px) {
 
     .beigeCurved h1, .beigeCurvedSmall h1, .containerGreen h1, .blocFruit h3 {
@@ -1028,5 +1028,9 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 
     .containerFruitsInline h3 {
         font-size: 1.2em
+    }
+
+    .blocFruitQuantity {
+        width:22%
     }
 }
