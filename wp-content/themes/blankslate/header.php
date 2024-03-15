@@ -23,10 +23,6 @@ if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1
 <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
 <div id="search"><?php get_search_form(); ?></div>
 </nav>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
 </header>
 <div id="container">
 <main id="content" role="main">

@@ -12,33 +12,50 @@
  Text Domain:  planty
 */
 
-html {
-    background: #FFF;
-    padding:0
-}
 
-body {
-    font-family: "Syne", sans-serif;
+
+html, body {
     padding:0;
     margin:0
 }
 
+body {
+    font-family: "Syne", sans-serif;
+}
+
+#site-title {
+    display: none
+}
+
 h1, h2, h3 {
+    font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 800!important;
     font-style: normal;
+}
+
+h1, .blocFruit h3 {
+    font-weight: 800!important;
+}
+
+h2, h3 {
+    font-weight: 700!important;
 }
 
 .green h1, .green h2, .green h3, .green p { color:#FFF }
 
-h2.green  {
-    font-size: 2.3em;
-    margin: 0
+h2.green, h2  {
+    font-size: 2.2em;
+    line-height: 1.1em;
+    margin: 0;
 }
 
-.green h1 { font-size: 3em }
+.containerGreen h2 {
+    padding-top: 0.5em
+}
 
-h4, h5 { color:#000!important }
+.green h1, .beigeCurvedSmall h1, .containerGreen h1 { font-size: 3em }
+
+h4, h5, .black, #header ul#menu-menuheader a { color:#000!important }
 
 h5 { 
 	font-weight:500; 
@@ -47,7 +64,9 @@ h5 {
 	margin-bottom:0!important
 }
 
-.blocFruit h3 { font-size:2em }
+.blocFruit h3 { 
+    font-size: 2.1em;
+}
 
 
 /* Header */
@@ -55,7 +74,7 @@ h5 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width:1400px;
+    max-width:100%;
     margin: auto
 }
 
@@ -76,25 +95,28 @@ h5 {
     margin: 0;
 }
 
-#header ul#menu-menuheader a {
+#header ul#menu-menuheader a:hover {
+    color:#C02E44
+}
+
+#header ul#menu-menuheader a, #header ul#menu-menuheader a:hover {
     text-decoration: none;
-    color:#000
 }
 
 #header ul#menu-menuheader li {
-    padding:1em 2em
+    padding:1em 1.5em 1em 0.7em
 }
 
 #header ul#menu-menuheader li:first-child {
     padding-left:0;
-    padding-right:0;
+    padding-right:0.7em;
 }
 
 #header ul#menu-menuheader li:last-child, .wp-element-button {
     background-color: #DC9F96;
 }
 
-#header ul#menu-menuheader li:last-child a, #header ul#menu-menuheader li:last-child:hover {
+#header ul#menu-menuheader li:last-child a, #header ul#menu-menuheader li:last-child:hover, .containerGreen, input[type="submit"], .wpcf7-not-valid-tip {
     color:#FFF!important;
 }
 
@@ -104,37 +126,59 @@ h5 {
 /* End Header */
 
 
+.containerWhite {
+    width:60%;
+    margin:5em auto
+}
+
+.containerWhite h2 {
+    font-size: 1.3em;
+    padding-top: 2em;
+}
 
 
 /* Background colors */
 
 .containerBeige, .beigeCurved, .beigeCurvedSmall {
     background:#ECE2DA;
-    width:100%;
     text-align: center;
     padding-top:3em;
-    padding-bottom:3em
+    padding-bottom:3em;
+    /* z-index: -500; */
+    position:relative
 }
 
 .beigeCurved {
     border-bottom-left-radius: 50% 10%!important;
     border-bottom-right-radius: 50% 10%!important;
+    box-shadow: 0 0.5em 0 #E3D9D0;
 }
 
 .beigeCurvedSmall {
     border-bottom-left-radius: 12% 2%;
     border-bottom-right-radius: 12% 2%;
+    margin-bottom: 3em;
 }
 
-.beigeCurved h1 {
-    color:#3B8E46;
+.beigeCurved h1, .wpcf7 form.sent .wpcf7-response-output, .green {
+    color:#3B8E46!important;
+}
+
+.beigeCurvedSmall h1 {
+    color:#D2776A;
+}
+
+.beigeCurved h1, .beigeCurvedSmall h1 {
     text-transform:uppercase;
     font-size: 2.5em;
 }
 
+.containerGreen h1 {
+    text-transform:uppercase;
+}
+
 .containerGreen {
     background:#3B8E46;
-    color:#FFF
 }
 
 .blocTexte {
@@ -160,36 +204,188 @@ h5 {
 
 
 
+/* Width */
+.containerGreen, .containerBeige, .beigeCurved, .beigeCurvedSmall, input, textarea, form.wpcf7-form {
+    width: 100%!important;
+}
+
+.formGroup, form, .commander  {
+    width: 70%
+}
+
+
+
+
 /* Large canette */
 .drinkLarge {
     margin-top:5em;
-    background-image: url(http://planty.local/wp-content/uploads/2024/02/plante_vers_gauche-1.png), url(http://planty.local/wp-content/uploads/2024/02/plante_vers_droite.png);
-    background-position: 40% 30%, 63% 30%;
+    background-image: url(http://planty.local/wp-content/uploads/2024/02/plante_vers_gauche.png), url(http://planty.local/wp-content/uploads/2024/02/plante_vers_droite.png);
+    background-position: 37% 72%, 66% 74%;
     background-repeat: no-repeat, no-repeat;
 }
 
-
-
-
-
-
-
-
-.fruitsContainer {
-	display: flex;
-	flex-wrap: wrap;
-	width:60%;
-    margin: 1em auto;
+#CoversRectangles {
+    margin: 3em 0 0 0;
     gap: 2em
 }
 
-.blocFruit {
-	position: relative;
-    flex-basis: calc(45% - 10px);
-	box-sizing: border-box;
+
+
+
+/* Forms */
+.formGroup {
+    position:relative;
+    margin:4em auto
 }
 
-.containerFruitsInline, .commandeForm {
+form {
+    text-align:left;
+    margin:5em auto;
+}
+
+.backgroundImage {
+    position: absolute;
+    bottom: 8em;
+    z-index: 0
+}
+
+input, textarea {
+    border: none;
+    border-radius: 5px;
+    margin: 0.5em 0em;
+}
+
+input {
+    height: 3em;
+}
+
+input[type="submit"] {
+    background: #DC9F96;
+    padding-left:2em;
+    padding-right:2em;
+    margin: 0 auto!important;
+    width:auto!important
+}
+
+form.wpcf7-form {
+    margin-top:0!important;
+    padding-top:0!important
+}
+
+.groupQuantities {
+    display:flex;
+    gap:1em;
+    padding-bottom: 1em
+}
+
+.groupQuantities .wpcf7-form-control-wrap {
+    display: inline;
+    flex-direction: column;
+    width: 2em;
+}
+
+input.quantity {
+    flex-direction: column;
+    width: 2em!important;
+}
+
+.quantity, .groupQuantities .wpcf7-form-control-wrap, p > input[type="submit"], .center {
+    text-align: center!important;
+}
+
+.groupCols { 
+    display:flex;
+    border-top: 1px solid #FFF;
+    padding-top:2em
+}
+
+.col {
+    flex-direction: column;
+    width:50%;
+    padding:0 0 0 2em;
+    margin:1em 0
+}
+
+.borderRight {
+    border-right: 1px solid #FFF;
+    padding:0 2em 0 0 
+}
+
+.col h2 {
+    padding: 0 0 0.5em 0;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output, .wpcf7 form.sent .wpcf7-response-output {
+    border: none;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    background: #ECE2DA;
+    padding: 2em;
+    color:#000
+}
+
+.wpcf7-not-valid-tip {
+    font-style: italic;
+}
+
+.wpcf7-spinner {
+    margin: 1em auto !important;
+    display: block !important;
+}  
+
+
+
+
+.fruitsContainer {	
+	width:60%;
+    margin: 1em auto 3em auto;
+    gap: 1em;
+}
+
+.commander .fruitsContainer {
+    width: 100%;
+    margin:3em auto 0 auto;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.blocFruit {
+    flex-basis: 47%;
+}
+
+.commander .blocFruit {
+    flex-basis: 23%;
+    height:9em!important;
+    min-height: 9em!important;
+}
+
+.commander .blocFruit h3 {
+    font-size: 1.3em
+}
+
+
+.bloc25 {
+    flex-basis: calc(25% - 1em);
+    text-align: center;
+}
+
+.blocFruit, .bloc25 {
+	position: relative;
+	box-sizing: border-box;
+    min-height: 15em!important;
+    height: 15em!important;
+    color:#FFF
+}
+
+ .bloc25 {
+    min-height: auto!important;
+    height: auto!important;
+}
+
+.commandeForm {
     width:100%!important;
     display: flex;
     justify-content: space-around;
@@ -202,55 +398,33 @@ h5 {
 	box-sizing: border-box;
 }
 
-.topBottomWhiteBorder {
-	border-top:1px solid #FFF;
-	border-bottom: 1px solid FFF;
-	margin:0;
-	padding:2em 0;
-	float: left;
-	display: block;
-	width:100%
-}
-
- .blocFruit25 {
-	position: relative;
-    flex-basis: calc(25% - 10px);
-	box-sizing: border-box;
-}
-
-.containerFruitsInline h3 { 		
-    font-size:1.5em 
-}
-
-#CoversRectangles .wp-block-cover, .wp-block-cover-image {
-	min-height:12em!important
-}
-
 .avis {
 	display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 80%;
 }
 
-.person {
-	width:50%;
-}
-
-.person img {
-    padding-right:1em
-}
-
-.personneAvis {
+.personneAvis, .person {
 	width:30%;
+    min-width:30%
 }
 
+.person { 
+    padding-right: 1em;
+}
 
-
+.containerBeige form {
+    position: relative;
+    width: 75%!important;
+    margin-top: 3em!important;
+    z-index: 100;
+}
 
 .contactForm input, .contactForm textarea {
     max-width: 100%!important;
-		border-radius: 0.5em!important;
-		border:none!important;
-		height: 4em
+    border-radius: 0.5em!important;
+    border:none!important;
+    height: 4em
 }
 
 .contactForm textarea {
@@ -266,33 +440,55 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 	background-color: var(--ast-global-color-2)!important
 }
 
-.green {
-	color: #3B8E46!important
+.topIntro { 
+    position:relative;
+    padding: 5em 0 3em 0
+}
+
+.introFleur {
+    position: relative;
+}
+
+.introFleur h1 {
+    z-index: 100;
+    position: relative
+}
+
+.topIntro .fleur {
+	position:absolute;
+    top: -4em; 
+	left:20em;
+	background-repeat: no-repeat;
+    width:9em;
+    z-index: 0
 }
 
 .equipe_container {
 	position: relative; 
-}
-
-.flex3Cols {
-		width: 60%;
-    justify-content: space-between;
+    height:25em
 }
 
 .equipe_container .branche {
 	position:absolute;
-  bottom: 0; 
-	right:10em;
-	z-index:-100;
+    bottom: -1em; 
+    width: 10em;
+	right:5em;
 	background-repeat: no-repeat
 }
 
-.summary { font-size:1.2em }
-
-.halfWidth { width:50% }
-.thirdWidth { width:30% }
+.summary { font-size:1.2em; width:50%!important; margin-left:auto; margin-right:auto; line-height: 1.5em }
 
 
+.commander {
+    margin: 0 auto;
+    padding:0 0 0 0;
+    border:1px solid #3B8E46
+}
+
+.commander h1 {
+    padding-top: 1em;
+    padding-bottom: 0.5em
+}
 
 
 
@@ -322,19 +518,23 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 
 
 
-
-
-
-
 /* Footer */
-#Footer {
+.footer {
     text-align:center;
     padding:1em 0
 }
 
-footer a {
+.footer a {
 	color:#000;
     text-decoration: none;
+}
+
+.footer a:hover {
+	color: #C02E44;
+}
+
+.footer ul {
+    list-style: none;
 }
 
 
@@ -347,85 +547,121 @@ footer a {
 /* PHONES */
 @media (min-width: 320px) and (max-width: 480px) {
 
-    body {
-        /* background: lime */
-    }
-
     h2 {
         padding:3em 0 1em 0!important;
-        margin:0
+        margin:0;
+        font-size:1.5em!important;
+        font-weight: 400!important;
+    }
+
+    .equipe_container h2, .containerBeige h2, #header ul#menu-menuheader, .col { 
+        padding:0 !important 
+    }
+
+    h3 {
+        font-size:1.1em!important;
+        padding-top:1em!important;
+    }
+
+    .blocFruit h3 {
+        padding-top:0!important;
+    }
+
+    .containerGreen h2 {
+        padding: 1em 0 0 0!important
     }
 
     h2.green {
         line-height: 1em;
     }
 
-    #header {
-        flex-direction: column;
+    #header, #menu, .blocTexte, .wp-block-group__inner-container, .summary, .blocFruit, .fruitsContainer, .commander .commander, input[type="submit"], .formGroup, .col, form.wpcf7-form {
+        width:100%!important;
+        max-width:100%!important;
     }
 
-    #menu {
-        width:100%;
+
+    .wp-block-group__inner-container {
+        width: 90% !important;
+        max-width: 90% !important;
     }
 
     #header ul#menu-menuheader {
-        padding: 0;
         display: flex;
         justify-content: space-between;
     }
 
     #header ul#menu-menuheader li {
-        padding: 1em;
-        text-align: center;
+        padding: 1em 0.6em;
+        font-size: 0.9em;
+        width:33%
     }
 
     #header ul#menu-menuheader li:first-child {
-        padding:1em;
+        padding: 1em 0.7em;
     }
 
-    #branding {
-        padding:2em
+    #branding, .topIntro {
+        padding: 2em
     }
 
-    .beigeCurved h1 {
-        font-size: 1.2em;
+    .beigeCurved h1, .beigeCurvedSmall h1, .containerGreen h1, .blocTexte, .summary {
+        font-size: 1em;
     }
 
     .beigeCurvedSmall h2, .blocTexte h2 {
         padding-top:0!important
     }
 
-    .blocTexte {
-        width: 100%;
-        font-size: 1.1em
+    .center, .quantity, .groupQuantities .wpcf7-form-control-wrap, form, .containerGreen, p > input[type="submit"], #CoversRectangles, #header ul#menu-menuheader li {
+        text-align: center;
+    }
+
+    #CoversRectangles {
+        gap: 1em!important;
+        width: 100%!important;
+        flex-direction: row;
+        flex-wrap: wrap!important;
     }
 
     .fruitsContainer {
-        width:80%;
+        margin-top:3em
     }
 
-    .avis {
+    .beigeCurvedSmall .wp-block-group__inner-container, .avis, .personneAvis {
+        width:80%!important;
+    }
+
+    .avis, .equipe_container {
         flex-direction: column;
+    }
+
+    .person {
+        padding-right: 0;
+        width:40%
+    }
+
+    .personneAvis, .fruitsContainer {
+        text-align:center;
     }
 
     .personneAvis {
-        width: 70%;
-        flex-direction: column;
-        text-align:center;
         border-bottom: 1px solid #D2776A;
-        padding:1em 0
+        padding:2em 0
     }
 
     .personneAvis h3 {
         margin: 0
     }
 
-    .summary, .blocFruit h3 {
-        font-size: 1.2em;
+    .blocTexte, .size-large  {
+        width:50%
     }
 
-    .summary, .blocTexte {
-        width:70%
+    .summary, p.summary, .blocTexte {
+        margin-left:auto;
+        margin-right:auto;
+        padding-bottom: 0!important;
     }
 
     .ligneCanettes {
@@ -437,20 +673,146 @@ footer a {
         vertical-align: top;
     }
 
-    .blocFruit25 {
-        min-height: 8em!important;
+    .blocFruit h3 {
+        font-size:0.2em!important
+    }
+
+    .beigeCurvedSmall .blocFruit h3 {
+        font-size:1.8em!important
+    }
+
+    .commander { 
+        width:100%;
+    }
+
+    .commander .fruitsContainer {
+        flex-direction: row
+    }
+
+    .commander .blocFruit {
+        height:6em!important;
+        min-height: 6em!important;
+        padding:0!important;
+    }
+
+    input.quantity {
+        width:2em!important
+    }
+
+    .blocFruit {
+        width:30%!important
+    }
+
+    .beigeCurvedSmall .blocFruit {
+        width: 100%!important
+    }
+
+    .containerGreen .blocFruit {
+        flex-basis: calc(30% - 1em);
     }
 
     .size-large {
-        width:50%;
         margin: 0 auto
     }
 
     .drinkLarge {
         margin-top: 3em;
-        background-image: url(http://planty.local/wp-content/uploads/2024/02/plante_vers_gauche-150x150.png), url(http://planty.local/wp-content/uploads/2024/02/plante_vers_droite-150x150.png);
+        background-image: url(http://planty.local/wp-content/uploads/2024/02/plante_vers_gauche-150x172.png), url(http://planty.local/wp-content/uploads/2024/02/plante_vers_droite-150x172.png);
         background-position: 6% 60%, 100% 30%;
         background-repeat: no-repeat, no-repeat;
+    }
+
+    .backgroundImage {
+        display:none;
+    }
+
+    .topIntro .fleur {
+        position: relative;
+        top: initial;
+        left:initial;
+        margin: 0 auto
+    }
+
+
+    .equipe_container { 
+        height: auto
+    }
+
+    .equipe_container .person {
+        padding: 2em 0 0 0;
+        border-top : 1px solid #D2776A
+    }
+
+    .equipe_container .fruitsContainer {
+        border-bottom: none;
+    }
+
+    .equipe_container .branche {
+        bottom: -4em;
+        right: 1em;
+        width: 5em;
+    }
+
+
+
+    /* Form */
+    
+    .containerBeige .wp-block-group__inner-container {
+        width:90%!important;
+        max-width: 90%!important;
+        margin: 0 auto
+    }
+
+    form, .avis {
+        margin:2em auto;
+    }
+    
+    input, textarea {
+        border: none;
+        border-radius: 5px;
+        margin: 0.5em 0em;
+        width: 100%;
+    }
+    
+    input {
+        height: 3em;
+    }
+
+    form.wpcf7-form {
+        margin-top:0!important;
+        padding-top:0!important
+    }
+
+     form .commander { width:80%!important; margin: 0 auto }
+    
+    .groupQuantities {
+        display:flex;
+        gap:1.4em;
+    }
+    
+    .groupQuantities .wpcf7-form-control-wrap {
+        display: inline;
+    }
+    
+    #header, .groupQuantities .wpcf7-form-control-wrap, .quantity, .groupCols, .personneAvis, .fruitsContainer {
+        flex-direction: column;
+    }
+    
+    .groupCols { 
+        display:flex;   
+    }
+    
+    .borderRight {
+        border-right: none;
+        padding:0
+    }
+    
+    .col h2 {
+        padding-bottom: 1em!important;
+    }    
+
+    .groupQuantities .wpcf7-form-control-wrap, .quantity {
+        width: 2em;  
     }
 }
 
@@ -461,12 +823,16 @@ footer a {
 
 /* LOW RES TABLETS */
 @media (min-width: 481px) and (max-width: 767px) {
-    #header {
-        flex-direction: column;
+
+    #menu, .containerBeige form {
+        width:100%!important;
     }
 
-    #menu {
-        width:100%;
+    .topIntro .fleur {
+        position: relative;
+        top: initial;
+        left:initial;
+        margin: 0 auto
     }
 
     #header ul#menu-menuheader {
@@ -476,11 +842,10 @@ footer a {
     }
 
     #header ul#menu-menuheader li {
-        padding: 1em;
         text-align: center;
     }
 
-    #header ul#menu-menuheader li:first-child {
+    #header ul#menu-menuheader li, #header ul#menu-menuheader li:first-child {
         padding:1em;
     }
 
@@ -488,29 +853,23 @@ footer a {
         padding:2em
     }
 
-    .beigeCurved h1 {
+    .beigeCurved h1, .beigeCurved h1, .beigeCurvedSmall h1, .containerGreen h1, .blocFruit h3 {
         font-size: 1.8em;
     }
 
-    .blocTexte, .summary {
+    .blocTexte, .commander, .avis, .fruitsContainer, .personneAvis {
         width: 80%;
     }
 
-    h2.green {
+    h2, h2.green {
         font-size: 1.5em;
     }
 
-    .blocFruit25 {
-        min-height: 10em!important;
-    }
-
-    .avis {
+    #header, .avis, .personneAvis {
         flex-direction: column;
     }
 
     .personneAvis {
-        width: 70%;
-        flex-direction: column;
         text-align:center;
         border-bottom: 1px solid #D2776A;
         padding:1em 0
@@ -519,34 +878,80 @@ footer a {
     .personneAvis h3 {
         margin: 0
     }
+
+    .person {
+        padding-right: 0;
+    }
+
+    .summary {
+        width: 60%!important
+    }
+
+    .equipe_container .branche {
+        width: 6em;
+        right: 1em;
+    }
+
+    .backgroundImage {
+        left: 7em;
+    }
+
+    .fruitsContainer {	
+        width:85%;
+        margin: 0 auto;
+        padding-bottom: 0;
+    }
+
+    .commander .blocFruit h3 {
+        font-size: 0.7em
+    }
+
+    .blocFruit {
+        flex-basis: 47%;
+    }
+
+    .blocFruit {
+        position: relative;
+        box-sizing: border-box;
+        min-height: 15em!important;
+        height: 15em!important;
+        color:#FFF
+    }
+
+    .bloc25 {
+        flex-basis: calc(27% - 1em);
+        text-align: center;
+    }
+
 }
  
+
 /* LANDSCAPE TABLETS */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
-    .blocFruit25 {
-        min-height: 10em!important;
-    }
-    
-  }
+}
 
   
 /* PORTRAIT TABLETS */
 @media (min-width: 768px) and (max-width: 1024px) {
-    /* #header {
-        
-    } */
 
-    .beigeCurved h1 {
+    .beigeCurved h1, .beigeCurvedSmall h1, .containerGreen h1, .blocFruit h3 {
         font-size: 2em;
+    }
+
+    .topIntro {
+        padding: 3em 0
     }
 
     .blocTexte {
         width:50%
     }
 
-    h2.green {
-        font-size: 1.8em;
+    h2, h2.green {
+        font-size: 1.7em;
+    }
+
+    .commander .blocFruit h3 {
+        font-size: 1em
     }
 
     .green {
@@ -562,9 +967,17 @@ footer a {
         vertical-align: top;
     }
 
+    .equipe_container .branche {
+        width: 5em;
+        right: 2em
+    }   
+
     .avis {
         flex-direction: row;
-        width:80%
+    }
+
+    .person {
+        padding-right: 0;
     }
 
     .personneAvis {
@@ -578,4 +991,27 @@ footer a {
         margin: 0
     }
 
+    .topIntro .fleur {
+        position:relative;
+        left:initial;
+        top: initial;
+        margin: 0 auto;
+    }
+
+    .commander, .avis, .fruitsContainer {
+        width: 80%;
+        gap: 1.5em
+    }
+
+    .containerBeige form {
+        width:100%!important;
+    }
+
+    .containerFruitsInline h3 {
+        font-size: 1.2em
+    }
+
+    .drinkLarge {
+        background-position: 24% 72%, 81% 75%;
+    }
 }

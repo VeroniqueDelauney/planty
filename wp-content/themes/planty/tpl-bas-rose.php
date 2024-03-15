@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php 
+
+/**
+ * Template Name: Bas rose
+ */
+
+
+get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <header class="header">
@@ -17,7 +24,7 @@
 <?php if ( comments_open() && !post_password_required() ) { comments_template( '', true ); } ?>
 <?php endwhile; endif; ?>
 
-<div class="ligneCanettes">
+<div class="ligneCanettes" style="background:#ECE2DA">
     <?php
     $iterations = 1;
     for($iterations = 1; $iterations <= 20; $iterations++) {

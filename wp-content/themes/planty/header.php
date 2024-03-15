@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
 <?php wp_body_open(); ?>
 <div id="wrapper" class="hfeed">
     
@@ -33,13 +33,12 @@ if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1
     'menu_class' => 'navbar-nav',
     'link_before' => '<span itemprop="name">', 
     'link_after' => '</span>' ) ); ?>
-
-
 </nav>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
 </header>
 <div id="container">
 <main id="content" role="main">
