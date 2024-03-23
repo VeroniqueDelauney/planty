@@ -12,23 +12,28 @@
  Text Domain:  planty
 */
 
-
+:root {
+    --red: #C02E44;
+    --redLight: #D2776A;
+    --beigeFonce: #DC9F96;
+    --beigeClair: #ECE2DA;
+    --green:#3B8E46;
+    --blue: #00b;
+    --black: #000;
+    --white: #FFF;
+    --fullwidth: 100%;
+  }
 
 html, body {
     padding:0;
     margin:0
 }
 
-body {
+body, h1, h2, h3 {
     font-family: "Syne", sans-serif;
 }
 
-/* #site-title {
-    display: none
-} */
-
 h1, h2, h3 {
-    font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
@@ -41,7 +46,7 @@ h2, h3 {
     font-weight: 700!important;
 }
 
-.green h1, .green h2, .green h3, .green p { color:#FFF }
+.green h1, .green h2, .green h3, .green p { color:var(--white) }
 
 h2.green, h2  {
     font-size: 2.2em;
@@ -55,7 +60,7 @@ h2.green, h2  {
 
 .green h1, .beigeCurvedSmall h1, .containerGreen h1 { font-size: 3em }
 
-h4, h5, .black, #header ul#menu-menuheader a { color:#000!important }
+h4, h5, .black, #header ul#menu-menuheader a { color:var(--black)!important }
 
 h5 { 
 	font-weight:500; 
@@ -96,7 +101,7 @@ h5 {
 }
 
 #header ul#menu-menuheader a:hover {
-    color:#C02E44
+    color:var(--red)!important
 }
 
 #header ul#menu-menuheader a, #header ul#menu-menuheader a:hover {
@@ -113,15 +118,15 @@ h5 {
 }
 
 #header ul#menu-menuheader li:last-child, .wp-element-button {
-    background-color: #DC9F96;
+    background-color: var(--beigeFonce);
 }
 
 #header ul#menu-menuheader li:last-child a, #header ul#menu-menuheader li:last-child:hover, .containerGreen, input[type="submit"], .wpcf7-not-valid-tip {
-    color:#FFF!important;
+    color:var(--white)!important;
 }
 
 #header ul#menu-menuheader li:last-child:hover, .wp-element-button:hover {
-    background: #C02E44!important;
+    background: var(--red)!important;
 }
 /* End Header */
 
@@ -140,7 +145,7 @@ h5 {
 /* Background colors */
 
 .containerBeige, .beigeCurved, .beigeCurvedSmall {
-    background:#ECE2DA;
+    background:var(--beigeClair);
     text-align: center;
     padding-top:3em;
     padding-bottom:3em;
@@ -161,11 +166,11 @@ h5 {
 }
 
 .beigeCurved h1, .wpcf7 form.sent .wpcf7-response-output, .green {
-    color:#3B8E46!important;
+    color:var(--green)!important;
 }
 
 .beigeCurvedSmall h1, .containerBeige .wpcf7-not-valid-tip {
-    color:#D2776A!important;
+    color:var(--redLight)!important;
 }
 
 .beigeCurved h1, .beigeCurvedSmall h1 {
@@ -178,7 +183,7 @@ h5 {
 }
 
 .containerGreen {
-    background:#3B8E46;
+    background:var(--green);
 }
 
 .blocTexte {
@@ -194,11 +199,11 @@ h5 {
 }
 
 .containerBeige h3, .beigeCurvedSmall h3 {
-    color:#FFF
+    color:var(--white)
 }
 
 .containerBeige h2, .beigeCurvedSmall h2 {
-    color:#D2776A;
+    color:var(--redLight);
     font-size: 2.3em;
 }
 
@@ -287,7 +292,7 @@ input {
 }
 
 input[type="submit"] {
-    background: #DC9F96;
+    background: var(--beigeFonce);
     padding-left:2em;
     padding-right:2em;
     margin: 0 auto!important;
@@ -324,7 +329,7 @@ input.quantity {
 
 .groupCols { 
     display:flex;
-    border-top: 1px solid #FFF;
+    border-top: 1px solid var(--white);
     padding-top:2em;
     width: 100%!important;   
 }
@@ -337,7 +342,7 @@ input.quantity {
 }
 
 .borderRight {
-    border-right: 1px solid #FFF;
+    border-right: 1px solid var(--white);
     padding:0 2em 0 0 
 }
 
@@ -350,9 +355,9 @@ input.quantity {
     width: 60%;
     margin: 0 auto;
     text-align: center;
-    background: #ECE2DA;
+    background: var(--beigeClair);
     padding: 2em;
-    color:#000
+    color:var(--black)
 }
 
 .wpcf7-not-valid-tip {
@@ -516,7 +521,7 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 .commander {
     margin: 0 auto;
     padding:0 0 0 0;
-    border:1px solid #3B8E46
+    border:1px solid var(--green)
 }
 
 .commander h1 {
@@ -559,12 +564,12 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 }
 
 .footer a {
-	color:#000;
+	color:var(--black);
     text-decoration: none;
 }
 
 .footer a:hover {
-	color: #C02E44;
+	color: var(--red)!important;
 }
 
 .footer ul {
@@ -609,7 +614,7 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
         line-height: 1em;
     }
 
-    #header, #menu, .blocTexte, .wp-block-group__inner-container, .summary, .blocFruit, .fruitsContainer, .commander .commander, input[type="submit"], .formGroup, .col, form.wpcf7-form {
+    #header, #menu, .blocTexte, .beigeCurvedSmall .blocFruit .commander, #CoversRectangles, .wp-block-group__inner-container, .summary, .blocFruit, .fruitsContainer, .commander .commander, input[type="submit"], .formGroup, .col, form.wpcf7-form {
         width:100%!important;
         max-width:100%!important;
     }
@@ -655,7 +660,6 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 
     #CoversRectangles {
         gap: 1em!important;
-        width: 100%!important;
         flex-direction: row;
         flex-wrap: wrap!important;
     }
@@ -682,7 +686,7 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
     }
 
     .personneAvis {
-        border-bottom: 1px solid #D2776A;
+        border-bottom: 1px solid var(--redLight);
         padding:2em 0
     }
 
@@ -721,10 +725,6 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
         font-size:1.8em!important
     }
 
-    .commander { 
-        width:100%;
-    }
-
     .commander .fruitsContainer {
         flex-direction: row
     }
@@ -741,14 +741,6 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 
     input.quantity {
         width:2em!important
-    }
-/* 
-    .blocFruit {
-        width:30%!important
-    } */
-
-    .beigeCurvedSmall .blocFruit {
-        width: 100%!important
     }
 
     .containerGreen .blocFruit {
@@ -776,7 +768,7 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 
     .equipe_container .person {
         padding: 2em 0 0 0;
-        border-top : 1px solid #D2776A
+        border-top : 1px solid var(--redLight)
     }
 
     .equipe_container .fruitsContainer {
@@ -907,7 +899,7 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
 
     .personneAvis {
         text-align:center;
-        border-bottom: 1px solid #D2776A;
+        border-bottom: 1px solid var(--redLight);
         padding:1em 0
     }
 
