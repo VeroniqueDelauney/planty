@@ -384,10 +384,13 @@ input.quantity {
 
 .blocFruit {
     flex-basis: 47%;
+    display: flex;
+    justify-content: center; /* align item horizontally */
+    align-items: center; /* align item vertically */        
+    background-size: cover;
 }
 
 .commander .blocFruit {
-    flex-basis: 23%;
     height:10em!important;
     min-height: 10em!important;
 }
@@ -400,16 +403,20 @@ input.quantity {
     display: flex;
     flex-direction: column;
     text-align:center;
-    width:23%
+    width:23%;
 }
 
-
-.blocFruit {
-	position: relative;
-	box-sizing: border-box;
-    min-height: 19em!important;
-    height: 19em!important;
-    color:#FFF
+.blocFruit#Fraise {
+    background-image: url('http://planty.local/wp-content/uploads/2024/02/fraises-300x200.jpg');
+}
+.blocFruit#Pamplemousse {
+    background-image: url('http://planty.local/wp-content/uploads/2024/02/pamplemousses-300x200.jpg');
+}
+.blocFruit#Framboise {
+    background-image: url('http://planty.local/wp-content/uploads/2024/02/framboises-300x200.jpg');
+}
+.blocFruit#Citron {
+    background-image: url('http://planty.local/wp-content/uploads/2024/02/citrons-300x200.jpg');
 }
 
 .commandeForm {
@@ -706,6 +713,10 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
         font-size:0.2em!important
     }
 
+    #Fraise h3, #Pamplemousse h3, #Framboise h3, #Citron h3 {
+        font-size:1em!important
+    }
+    
     .beigeCurvedSmall .blocFruit h3 {
         font-size:1.8em!important
     }
@@ -725,7 +736,7 @@ div.wpforms-container-full .wpforms-form .wpforms-submit-container {
     }
 
     .blocFruitQuantity {
-        width:47%
+        width:46%
     }
 
     input.quantity {
