@@ -24,7 +24,7 @@ get_header(); ?>
 <?php if ( comments_open() && !post_password_required() ) { comments_template( '', true ); } ?>
 <?php endwhile; endif; ?>
 
-<div class="ligneCanettes" style="background:#ECE2DA">
+<div class="ligneCanettes" id="Rose">
     <?php
     $iterations = 1;
     for($iterations = 1; $iterations <= 20; $iterations++) {
