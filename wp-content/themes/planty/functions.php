@@ -42,4 +42,5 @@ add_action( 'init', 'register_my_menu' );
 
 
 
-// la ligne 7 permet d'ajouter nouvelles css. Changer "theme-style" par un nom unique pour chaque css. Dupliquer la ligne pour chaque css en changeant nom. 
+// la ligne 7 permet d'ajouter nouvelles css. Changer "theme-style" par un nom unique pour chaque css. 
+// Dupliquer la ligne pour chaque css en changeant nom. 
